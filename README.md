@@ -85,60 +85,60 @@ El objetivo de estos ejercicios es observar cómo interactúan el motor de físi
 * **Resultado Visual:**
 <img width="692" height="388" alt="s1" src="https://github.com/user-attachments/assets/c7c7f995-34f5-4a73-94fe-931e4a112fd9" />
 
-* **Explicación:** [Escribe aquí por qué ocurre esto. Ej: El cubo cae por la gravedad al tener Rigidbody, pero la esfera se queda flotando porque no lo tiene...]
+* **Explicación:** La esfera se queda flotando en el aire porque al no tener Rigidbody, no le afecta la gravedad. El cubo, que sí lo tiene, cae hasta chocar con el plano. El plano funciona perfectamente como un suelo firme estático porque tiene su Collider.
 
 ### Situación 2
 * **Configuración:** Plano (solo Collider). Cubo (Rigidbody). Esfera (Rigidbody).
 * **Resultado Visual:**
 <img width="688" height="390" alt="s2" src="https://github.com/user-attachments/assets/89b063df-ed6d-4cf9-98b4-4ac58c96446f" />
 
-* **Explicación:** [Escribe aquí tu explicación]
+* **Explicación:** Como ahora le hemos añadido el componente Rigidbody a la esfera, tanto ella como el cubo caen empujados por la gravedad. El plano, al tener solo Collider, sigue comportándose como un suelo inamovible que detiene la caída de ambos.
 
 ### Situación 3
 * **Configuración:** Plano (solo Collider). Cubo (Rigidbody). Esfera (Rigidbody Cinemático).
 * **Resultado Visual:**
 <img width="688" height="390" alt="s3" src="https://github.com/user-attachments/assets/388d1a02-f241-463b-a0c2-d1fbcd4ec5a5" />
 
-* **Explicación:** [Escribe aquí tu explicación. Ej: La esfera no cae porque al ser cinemática ignora la gravedad, pero...]
+* **Explicación:** La esfera se queda flotando. Aunque tiene Rigidbody, al marcar la casilla "Is Kinematic" le estamos diciendo al motor que ignore las fuerzas físicas globales (como la gravedad). El cubo, que no es cinemático, cae de forma normal.
 
 ### Situación 4
 * **Configuración:** Plano (Rigidbody). Cubo (Rigidbody). Esfera (Rigidbody).
 * **Resultado Visual:**
 <img width="688" height="390" alt="s4" src="https://github.com/user-attachments/assets/ce7054bf-d4bc-4ad2-bc90-8d9b75b271b9" />
 
-* **Explicación:** [Escribe aquí tu explicación]
+* **Explicación:** Al ponerle un Rigidbody dinámico al plano, este deja de ser un obstáculo fijo. La gravedad actúa sobre él y tira del suelo hacia el vacío, llevándose consigo a la esfera y al cubo.
 
 ### Situación 5
 * **Configuración:** Plano (Rigidbody Cinemático). Cubo (Rigidbody). Esfera (Rigidbody, Masa x10).
 * **Resultado Visual:**
 <img width="688" height="390" alt="s5" src="https://github.com/user-attachments/assets/112a2836-4d97-4a61-8beb-69bb89288f60" />
 
-* **Explicación:** [Escribe aquí tu explicación]
+* **Explicación:** El plano recupera su función de suelo fijo al marcarlo como cinemático (ya no cae). La esfera y el cubo caen, pero como le hemos subido la masa a la esfera a 10, esta es mucho más pesada. Al chocar, empujará y desplazará al cubo con bastante facilidad.
 
 ### Situación 6
 * **Configuración:** Plano (Rigidbody Cinemático). Cubo (Rigidbody). Esfera (Rigidbody, Masa x100).
 * **Resultado Visual:**
 <img width="688" height="390" alt="s6" src="https://github.com/user-attachments/assets/1189ae27-0641-41d8-9c8c-a9265278a273" />
 
-* **Explicación:** [Escribe aquí tu explicación. ¿Hay diferencia en el impacto respecto a la situación 5?]
+* **Explicación:** Ocurre lo mismo que en la situación anterior, pero el impacto es mucho más exagerado. Con una masa 100 veces mayor, la esfera apartará al cubo como si estuviera hecho de papel, demostrando cómo la variable "Masa" altera drásticamente la fuerza en los cálculos de colisión.
 
 ### Situación 7
 * **Configuración:** Plano (Rigidbody). Cubo (Rigidbody). Esfera (Rigidbody con fricción).
 * **Resultado Visual:**
 <img width="688" height="390" alt="s7" src="https://github.com/user-attachments/assets/1db94633-5f28-41a3-b53e-c3fca8cf97ff" />
 
-* **Explicación:** [Escribe aquí tu explicación]
+* **Explicación:** Como el plano vuelve a tener un Rigidbody normal, todo el escenario se cae al vacío de nuevo. Le hemos puesto un material con fricción a la esfera (lo que normalmente haría que le cueste resbalar sobre una superficie), pero al estar cayendo todo el suelo a la vez, apenas da tiempo a apreciar este efecto de rozamiento.
 
 ### Situación 8
 * **Configuración:** Plano (Rigidbody Cinemático). Cubo (Rigidbody). Esfera (Trigger, sin Rigidbody).
 * **Resultado Visual:**
 <img width="688" height="390" alt="s8" src="https://github.com/user-attachments/assets/58b7651a-917d-4989-bb5e-6987daccb897" />
 
-* **Explicación:** [Escribe aquí tu explicación]
+* **Explicación:** La esfera se queda flotando por no tener Rigidbody, pero al marcar la opción "Is Trigger" en su Collider, se vuelve incorpórea ("fantasma"). Si el cubo cae sobre ella, la atravesará limpiamente sin chocar, ya que el Trigger desactiva la colisión física sólida.
 
 ### Situación 9
 * **Configuración:** Plano (Rigidbody Cinemático). Cubo (Rigidbody). Esfera (Rigidbody y Trigger).
 * **Resultado Visual:**
 <img width="688" height="390" alt="s9" src="https://github.com/user-attachments/assets/61217087-06e9-4c06-9835-9e9efaa985a7" />
 
-* **Explicación:** [Escribe aquí tu explicación]
+* **Explicación:** La esfera ahora sí cae porque tiene Rigidbody, pero como sigue siendo un Trigger, ignora cualquier choque sólido. Como resultado, la esfera atraviesa el cubo y el plano del suelo limpiamente, cayendo hacia el vacío sin detenerse nunca.
