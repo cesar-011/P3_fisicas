@@ -120,14 +120,14 @@ El objetivo de estos ejercicios es observar cómo interactúan el motor de físi
 * **Resultado Visual:**
 <img width="688" height="390" alt="s6" src="https://github.com/user-attachments/assets/1189ae27-0641-41d8-9c8c-a9265278a273" />
 
-* **Explicación:** Ocurre lo mismo que en la situación anterior, pero el impacto es mucho más exagerado. Con una masa 100 veces mayor, la esfera apartará al cubo como si estuviera hecho de papel, demostrando cómo la variable "Masa" altera drásticamente la fuerza en los cálculos de colisión.
+* **Explicación:** Ocurre lo mismo que en la situación anterior, pero el impacto es mucho más exagerado. Con una masa 100 veces mayor, la esfera apartará al cubo.
 
 ### Situación 7
 * **Configuración:** Plano (Rigidbody). Cubo (Rigidbody). Esfera (Rigidbody con fricción).
 * **Resultado Visual:**
 <img width="688" height="390" alt="s7" src="https://github.com/user-attachments/assets/1db94633-5f28-41a3-b53e-c3fca8cf97ff" />
 
-* **Explicación:** Como el plano vuelve a tener un Rigidbody normal, todo el escenario se cae al vacío de nuevo. Le hemos puesto un material con fricción a la esfera (lo que normalmente haría que le cueste resbalar sobre una superficie), pero al estar cayendo todo el suelo a la vez, apenas da tiempo a apreciar este efecto de rozamiento.
+* **Explicación:** Como el plano vuelve a tener un Rigidbody normal, todo el escenario se cae al vacío de nuevo. Le hemos puesto un material con fricción a la esfera, pero al estar cayendo todo el suelo a la vez, apenas da tiempo a apreciar este efecto de rozamiento.
 
 ### Situación 8
 * **Configuración:** Plano (Rigidbody Cinemático). Cubo (Rigidbody). Esfera (Trigger, sin Rigidbody).
