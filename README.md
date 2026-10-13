@@ -76,3 +76,69 @@ Este repositorio contiene una serie de ejercicios prácticos desarrollados en Un
 > **Demostración:**
 <img width="694" height="388" alt="ej6" src="https://github.com/user-attachments/assets/d0c01df4-59a2-4867-bc4c-96f937c7986a" />
 
+
+
+El objetivo de estos ejercicios es observar cómo interactúan el motor de físicas y las colisiones dependiendo de si los objetos son estáticos (solo Collider), dinámicos (Rigidbody) o cinemáticos (Is Kinematic), así como el efecto de la masa, la fricción y los Triggers.
+
+### Situación 1
+* **Configuración:** Plano (solo Collider). Cubo (Rigidbody). Esfera (solo Collider).
+* **Resultado Visual:**
+<img width="692" height="388" alt="s1" src="https://github.com/user-attachments/assets/c7c7f995-34f5-4a73-94fe-931e4a112fd9" />
+
+* **Explicación:** [Escribe aquí por qué ocurre esto. Ej: El cubo cae por la gravedad al tener Rigidbody, pero la esfera se queda flotando porque no lo tiene...]
+
+### Situación 2
+* **Configuración:** Plano (solo Collider). Cubo (Rigidbody). Esfera (Rigidbody).
+* **Resultado Visual:**
+<img width="688" height="390" alt="s2" src="https://github.com/user-attachments/assets/89b063df-ed6d-4cf9-98b4-4ac58c96446f" />
+
+* **Explicación:** [Escribe aquí tu explicación]
+
+### Situación 3
+* **Configuración:** Plano (solo Collider). Cubo (Rigidbody). Esfera (Rigidbody Cinemático).
+* **Resultado Visual:**
+<img width="688" height="390" alt="s3" src="https://github.com/user-attachments/assets/388d1a02-f241-463b-a0c2-d1fbcd4ec5a5" />
+
+* **Explicación:** [Escribe aquí tu explicación. Ej: La esfera no cae porque al ser cinemática ignora la gravedad, pero...]
+
+### Situación 4
+* **Configuración:** Plano (Rigidbody). Cubo (Rigidbody). Esfera (Rigidbody).
+* **Resultado Visual:**
+<img width="688" height="390" alt="s4" src="https://github.com/user-attachments/assets/ce7054bf-d4bc-4ad2-bc90-8d9b75b271b9" />
+
+* **Explicación:** [Escribe aquí tu explicación]
+
+### Situación 5
+* **Configuración:** Plano (Rigidbody Cinemático). Cubo (Rigidbody). Esfera (Rigidbody, Masa x10).
+* **Resultado Visual:**
+<img width="688" height="390" alt="s5" src="https://github.com/user-attachments/assets/112a2836-4d97-4a61-8beb-69bb89288f60" />
+
+* **Explicación:** [Escribe aquí tu explicación]
+
+### Situación 6
+* **Configuración:** Plano (Rigidbody Cinemático). Cubo (Rigidbody). Esfera (Rigidbody, Masa x100).
+* **Resultado Visual:**
+<img width="688" height="390" alt="s6" src="https://github.com/user-attachments/assets/1189ae27-0641-41d8-9c8c-a9265278a273" />
+
+* **Explicación:** [Escribe aquí tu explicación. ¿Hay diferencia en el impacto respecto a la situación 5?]
+
+### Situación 7
+* **Configuración:** Plano (Rigidbody). Cubo (Rigidbody). Esfera (Rigidbody con fricción).
+* **Resultado Visual:**
+<img width="688" height="390" alt="s7" src="https://github.com/user-attachments/assets/1db94633-5f28-41a3-b53e-c3fca8cf97ff" />
+
+* **Explicación:** [Escribe aquí tu explicación]
+
+### Situación 8
+* **Configuración:** Plano (Rigidbody Cinemático). Cubo (Rigidbody). Esfera (Trigger, sin Rigidbody).
+* **Resultado Visual:**
+<img width="688" height="390" alt="s8" src="https://github.com/user-attachments/assets/58b7651a-917d-4989-bb5e-6987daccb897" />
+
+* **Explicación:** [Escribe aquí tu explicación]
+
+### Situación 9
+* **Configuración:** Plano (Rigidbody Cinemático). Cubo (Rigidbody). Esfera (Rigidbody y Trigger).
+* **Resultado Visual:**
+<img width="688" height="390" alt="s9" src="https://github.com/user-attachments/assets/61217087-06e9-4c06-9835-9e9efaa985a7" />
+
+* **Explicación:** [Escribe aquí tu explicación]
